@@ -1,9 +1,9 @@
 /*
 const config = {
-    user        : 'Pizzas',
-    password    : 'Pizzas',
-    server      : 'N059D021', 
-    database    : 'DAI-Pizzas',
+    user        : 'Personajes',
+    password    : 'Personajes',
+    server      : 'A-PHZ2-CEO-008', 
+    database    : 'DAI-Personajes',
     options     : {
         trustServerCertificate  : true,
         trustedConnection       : true
@@ -27,10 +27,9 @@ const config = {
 }
 
 export default config;
-/*
+
 Archivo .env
-    DB_USER    	= "Pizzas"
-    DB_PASSWORD	= "Pizzas"
-    DB_SERVER  	= "N059D021" 
-    DB_DATABASE	= "DAI-Pizzas"
-    */
+    DB_USER    	= "Personajes"
+    DB_PASSWORD	= "Personajes"
+    DB_SERVER  	= "A-PHZ2-CEO-008" 
+    DB_DATABASE	= "DAI-Personajes"
