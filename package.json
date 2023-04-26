@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/santiagokasses/DAI-personajes/issues"
   },
-  "homepage": "https://github.com/santiagokasses/DAI-personajes#readme"
+  "homepage": "https://github.com/santiagokasses/DAI-personajes#readme",
+  "dependencies": {
+    "mssql": "^9.1.1"
+  }
 }
