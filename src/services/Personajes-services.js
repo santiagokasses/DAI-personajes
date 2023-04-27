@@ -37,7 +37,7 @@ class PersonajesService {
         try {
             let pool = await sql.connect(config);
             let result = await pool.request()
-            .query(`INSERT INTO Personaje (Nombre, Imagen, Edad, Peso, Historia, Asociadas)
+            .query(`INSERT INTO Personaje (Nombre, Imagen, Edad, Peso, Historia, peliserie)
             VALUES ('${personaje.Nombre}', '${personaje.Imagen}', ${personaje.Edad}, ${personaje.Peso}, '${personaje.Historia}', '${personaje.Asociadas}')`);
             rowsAffected = result.rowsAffected;
         } catch (error) {
@@ -59,7 +59,7 @@ class PersonajesService {
                 Edad = ${personaje.Edad},
                 Peso = ${personaje.Peso},
                 Historia = '${personaje.Historia}',
-                Asociadas = '${personaje.Asociadas}'
+                peliserie = '${personaje.Asociadas}'
                 WHERE IDd = ${personaje.id}`);
             rowsAffected = result.rowsAffected;
         } catch (error) {
