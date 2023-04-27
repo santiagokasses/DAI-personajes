@@ -2,7 +2,7 @@ import config from '../../dbconfig-env.js';
 //import config from '../../dbconfig.js';
 import sql from 'mssql';
 
-class PizzasService {
+class PersonajeService {
     getAll = async () => {
         let returnArray = null;
         console.log('Estoy en: PizzaService.getAll()');
