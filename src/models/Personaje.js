@@ -7,5 +7,4 @@ class Personaje {
     historia;
     peliserie;
 }
-
 export default Personaje;
