@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-=======
 import config from '../../dbconfig-env.js';
->>>>>>> Stashed changes
 import sql from 'mssql';
 import config from '../../dbconfig-env.js';
 
