@@ -1,4 +1,4 @@
-import config from './dbconfig.js';
+import config from './dbconfig-env.js';
 import sql from 'mssql';
 
 console.clear();
