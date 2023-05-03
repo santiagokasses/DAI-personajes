@@ -19,7 +19,7 @@ app.get('/auth/login', function(req, res) {
 })
 
 app.get('/characters', function(req, res) {
-    res.send(`${getById(id).toString()}`);
+    res.send(`${getAll().value}`);
 })
 
 // Iniciamos el servidor
