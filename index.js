@@ -1,4 +1,4 @@
-var express = require('express')
+import express from "express";
 import PersonajeService from "./src/services/Personajes-services.js"
 import PeliculasService from "./src/services/Peliculas-services.js";
 
