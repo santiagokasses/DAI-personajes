@@ -1,9 +1,8 @@
-import express from "express";
+import express from "express"
 import PersonajeService from "./src/services/Personajes-services.js"
-import PeliculasService from "./src/services/Peliculas-services.js";
+import PeliculasService from "./src/services/Peliculas-services.js"
 
-import index from "./src/pages/index.js";
-import login from "./src/pages/login.js";
+import index from "./src/pages/index.js";   
 
 var app = express()
 
@@ -20,7 +19,7 @@ app.get('/auth/login', function(req, res) {
 })
 
 app.get('/characters', function(req, res) {
-    res.send(getAll());
+    res.send(`${getById(id).toString()}`);
 })
 
 // Iniciamos el servidor
@@ -45,7 +44,7 @@ async function deleteById(deleteid){
 async function getAll(){
     let svc = new PersonajeService();
     let data;
-    
+
     data = await svc.getAll()
     console.log(data)
 }
