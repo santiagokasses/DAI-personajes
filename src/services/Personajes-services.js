@@ -7,7 +7,7 @@ class PersonajesService {
         console.log('Estoy en: PersonajesService.getAll()');
         try {
             let pool = await sql.connect(config);
-            let result = await pool.request().query("SELECT * from Personaje");
+            let result = await pool.request().query("SELECT id, nombre, imagen from Personaje");
             returnArray = result.recordsets[0];
         }
         catch (error) {
