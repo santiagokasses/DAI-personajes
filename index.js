@@ -9,11 +9,17 @@ app.get('/', function(req, res) {
     res.send('Soy la Home Page!');
 })
 
-
 app.get('/about', function(req, res) {
     res.send('Soy la pagina del about!');
 })
 
+app.get('/auth/login', function(req, res) {
+    res.send('Soy la pagina del about!');
+})
+
+app.get('/characters', function(req, res) {
+    res.send(getAll());
+})
 
 // Iniciamos el servidor
 app.listen(3000, function() {
@@ -23,7 +29,7 @@ app.listen(3000, function() {
 var deleteid = 6
 var id = 1
 //deleteById(deleteid)
-//getAll()
+getAll()
 getById(id)
 async function deleteById(deleteid){
     let svc = new PersonajeService();
