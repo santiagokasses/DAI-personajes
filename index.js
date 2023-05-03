@@ -20,11 +20,6 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!');
 })
 
-// Ejecutamos la app escribiendo en la consola: node index.js
-
-// Vamos al explorador y escribimos este link: http://localhost:3000
-
-
 var deleteid = 6
 var id = 1
 //deleteById(deleteid)
@@ -53,3 +48,7 @@ async function getById(id){
     console.log(data);
 
 }
+
+
+// Ejecutamos la app escribiendo en la consola: node index.js
+// Vamos al explorador y escribimos este link: http://localhost:3000
