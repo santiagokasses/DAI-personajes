@@ -4,8 +4,12 @@ import PeliculasService from "./src/services/Peliculas-services.js"
 import index from "./src/pages/index.js"; 
 import peliculas from "./src/pages/peliculas.js";
 import personajes from "./src/pages/personajes.js";
+<<<<<<< Updated upstream
 import Personajes from "./src/services/Personajes-services.js";
 import Peliculas from "./src/services/Peliculas-services";
+=======
+import Personajes from "./src/models/Personajes.js";
+>>>>>>> Stashed changes
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
