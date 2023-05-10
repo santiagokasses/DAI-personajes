@@ -17,32 +17,28 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
-let Kitty = new Personajes
-Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
-AddPersonaje(Kitty);
-
 var deleteid = 6
 var id = 6
 var personaje = new Personajes
 personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
-console.log(personaje)
-//deleteById(deleteid)
-//getAll()
-//getById(10)
-//Update(id)
-async function deleteById(deleteid){
+var Kitty = new Personajes
+Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
+
+
+////////////////Personajes//////////////////
+async function deleteByIdPersonaje(deleteid){
     let svc = new PersonajeService();
     let data;
     data = await svc.deleteById(deleteid)
     console.log(data);
 }
-async function getAll(){
+async function getAllPersonaje(){
     let svc = new PersonajeService();
     let data;
     data = await svc.getAll()
     console.log(data);
 }
-async function getById(id){
+async function getByIdPersonaje(id){
     let svc = new PersonajeService();
     let data;
     data = await svc.getById(id)
@@ -54,23 +50,65 @@ async function AddPersonaje(PersonajeNuevo){
     data = await svc.insert(PersonajeNuevo)
     console.log(data);
 }
-async function Update(id){
+
+async function UpdatePersonaje(id){
     let svc = new PersonajeService();
     let data;
     let idPersonaje
-    idPersonaje = getById(id)
     data = await svc.update(personaje)
     console.log(data);
 }
 
+//deleteByIdPersonaje(deleteid)
+//getAllPersonaje()
+//getByIdPersonaje(10)
+
+////////NO FUNCIONAN/////////
+//UpdatePersonaje(id)
+//AddPersonaje(Kitty)
+////////NO FUNCIONAN/////////
+
 ////////////////PELICULAS//////////////////
+async function deleteByIdPelicula(deleteid){
+    let svc = new PersonajeService();
+    let data;
+    data = await svc.deleteById(deleteid)
+    console.log(data);
+}
+async function getAllPelicula(){
+    let svc = new PersonajeService();
+    let data;
+    data = await svc.getAll()
+    console.log(data);
+}
+async function getByIdPelicula(id){
+    let svc = new PersonajeService();
+    let data;
+    data = await svc.getById(id)
+    console.log(data);
+}
 async function AddPelicula(PeliculaNueva){
     let svc = new PeliculasService();
     let data;
     data = await svc.insert(PeliculaNueva)
     console.log(data);
 }
+async function UpdatePelicula(id){
+    let svc = new PersonajeService();
+    let data;
+    let idPersonaje
+    data = await svc.update(personaje)
+    console.log(data);
+}
 
+//deleteByIdPelicula(deleteid)
+//getAllPelicula()
+//getByIdPelicula(10)
+
+////////NO FUNCIONAN/////////
+//UpdatePelicula(id)
+//AddPelicula(Kitty)
+////////NO FUNCIONAN/////////
 
 // Ejecutamos la app escribiendo en la consola: node index.js
 // Vamos al explorador y escribimos este link: http://localhost:3000
