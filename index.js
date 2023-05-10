@@ -4,6 +4,7 @@ import PeliculasService from "./src/services/Peliculas-services.js"
 import index from "./src/pages/index.js"; 
 import peliculas from "./src/pages/peliculas.js";
 import personajes from "./src/pages/personajes.js";
+import Personajes from "./src/models/Personajes.js";
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
@@ -16,7 +17,7 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
-let Kitty = new PersonajeService
+let Kitty = new Personajes
 Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
 AddPersonaje(Kitty);
 
