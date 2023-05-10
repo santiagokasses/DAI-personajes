@@ -32,18 +32,6 @@ async function deleteById(deleteid){
     data = await svc.deleteById(deleteid)
     console.log(data);
 }
-async function AddPersonaje(PersonajeNuevo){
-    let svc = new PersonajeService();
-    let data;
-    data = await svc.insert(PersonajeNuevo)
-    console.log(data);
-}
-async function AddPelicula(PeliculaNueva){
-    let svc = new PeliculasService();
-    let data;
-    data = await svc.insert(PeliculaNueva)
-    console.log(data);
-}
 async function getAll(){
     let svc = new PersonajeService();
     let data;
@@ -54,6 +42,18 @@ async function getById(id){
     let svc = new PersonajeService();
     let data;
     data = await svc.getById(id)
+    console.log(data);
+}
+async function AddPersonaje(PersonajeNuevo){
+    let svc = new PersonajeService();
+    let data;
+    data = await svc.insert(PersonajeNuevo)
+    console.log(data);
+}
+async function AddPelicula(PeliculaNueva){
+    let svc = new PeliculasService();
+    let data;
+    data = await svc.insert(PeliculaNueva)
     console.log(data);
 }
 
