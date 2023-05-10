@@ -9,18 +9,22 @@ var app = express()
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
 const getPersonajes = async() => JSON.stringify(await new PersonajeService().getAll())
 app.get('/', async(req, res) => res.send(index(await getPeliculas(), await getPersonajes())))
-app.get('/peliculas', async(req, res) => res.send(peliculas(await getPeliculas())))
-app.get('/personajes', async(req, res) => res.send(personajes(await getPersonajes())))
+app.get('/GET/movies', async(req, res) => res.send(peliculas(await getPeliculas())))
+app.get('/characters', async(req, res) => res.send(personajes(await getPersonajes())))
 
 app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
+let Kitty = new PersonajeService
+Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
+AddPersonaje(Kitty);
+
 var deleteid = 6
 var id = 1
 //deleteById(deleteid)
 //getAll()
-//getById(id)
+getById(10)
 async function deleteById(deleteid){
     let svc = new PersonajeService();
     let data;
