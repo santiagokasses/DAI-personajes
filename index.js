@@ -4,7 +4,7 @@ import PeliculasService from "./src/services/Peliculas-services.js"
 import index from "./src/pages/index.js"; 
 import peliculas from "./src/pages/peliculas.js";
 import personajes from "./src/pages/personajes.js";
-import Personajes from "./src/models/Personajes.js";
+import Personajes from "./src/models/Personaje";
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
