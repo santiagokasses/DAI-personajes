@@ -5,6 +5,7 @@ import index from "./src/pages/index.js";
 import peliculas from "./src/pages/peliculas.js";
 import personajes from "./src/pages/personajes.js";
 import Personajes from "./src/services/Personajes-services.js";
+import Peliculas from "./src/services/Peliculas-services";
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
@@ -30,6 +31,11 @@ console.log(personaje)
 //getAll()
 //getById(10)
 //Update(id)
+
+let HelloKitty = new Peliculas
+HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
+AddPelicula(HelloKitty)
+
 async function deleteById(deleteid){
     let svc = new PersonajeService();
     let data;
