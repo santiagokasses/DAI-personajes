@@ -2,8 +2,7 @@ import express from "express"
 import PersonajeService from "./src/services/Personajes-services.js"
 import PeliculasService from "./src/services/Peliculas-services.js"
 import index from "./src/pages/index.js"; 
-import peliculas from "./src/pages/peliculas.js";
-import personajes from "./src/pages/personajes.js";
+import Personaje from "./src/models/Personaje.js";
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
@@ -21,26 +20,18 @@ Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b
 AddPersonaje(Kitty);
 
 var deleteid = 6
-var id = 1
+var id = 6
+var personaje = new Personaje
+personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
+console.log(personaje)
 //deleteById(deleteid)
 //getAll()
-getById(10)
+//getById(id)
+//Update(personaje)
 async function deleteById(deleteid){
     let svc = new PersonajeService();
     let data;
     data = await svc.deleteById(deleteid)
-    console.log(data);
-}
-async function AddPersonaje(PersonajeNuevo){
-    let svc = new PersonajeService();
-    let data;
-    data = await svc.insert(PersonajeNuevo)
-    console.log(data);
-}
-async function AddPelicula(PeliculaNueva){
-    let svc = new PeliculasService();
-    let data;
-    data = await svc.insert(PeliculaNueva)
     console.log(data);
 }
 async function getAll(){
@@ -53,6 +44,14 @@ async function getById(id){
     let svc = new PersonajeService();
     let data;
     data = await svc.getById(id)
+    console.log(data);
+}
+async function Update(id){
+    let svc = new PersonajeService();
+    let data;
+    let idPersonaje
+    idPersonaje = getById(id)
+    data = await svc.update(personaje)
     console.log(data);
 }
 
