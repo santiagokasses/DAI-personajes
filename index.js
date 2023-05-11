@@ -106,6 +106,10 @@ let HelloKitty = new Peliculas
 HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
 AddPelicula(HelloKitty)
 
+let ModificarPelicula = new Peliculas
+ModificarPelicula = {id: '10', imagen: 'https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/XDJZYOOWJBBYNCNVRWZACJPIEE', titulo: 'Hello Kitty', fechaCreacion: '23/05/2010', calificacion:'9', PersonajesAsociados: '10'}
+UpdatePelicula(ModificarPelicula)
+
 //getAllPelicula()
 //getByIdPelicula(10)
 
