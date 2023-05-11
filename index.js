@@ -1,11 +1,11 @@
 import express from "express"
 import PersonajeService from "./src/services/Personajes-services.js"
 import PeliculasService from "./src/services/Peliculas-services.js"
-import index from "./src/pages/index.js"; 
-import peliculas from "./src/pages/peliculas.js";
-import personajes from "./src/pages/personajes.js";
-import Personajes from "./src/services/Personajes-services.js";
-import Peliculas from "./src/services/Peliculas-services";
+import index from "./src/pages/index.js"
+import peliculas from "./src/pages/peliculas.js"
+import personajes from "./src/pages/personajes.js"
+import Personaje from "./src/models/Personaje.js"
+import Peliculas from "./src/models/Peliserie.js"
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
@@ -20,14 +20,12 @@ app.listen(3000, function() {
 
 var deleteid = 6
 var id = 6
-var personaje = new Personajes
+var personaje = new Personaje
 personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
 console.log(personaje)
 UpdatePersonaje(personaje)
-//deleteById(deleteid)
-//getAll()
-//getById(10)
-//Update(id)
+
+
 deleteByIdPersonaje(10)
 var Kitty = new Personajes
 Kitty = {id: 10, imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:10,peso:15,historia:'es un gato',peliserie:'Hello Kitty' }
