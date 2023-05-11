@@ -114,6 +114,7 @@ deleteByIdPelicula(10)
 let HelloKitty = new Peliculas
 HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
 AddPelicula(HelloKitty)
+
 //getAllPelicula()
 //getByIdPelicula(10)
 
