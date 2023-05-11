@@ -18,21 +18,18 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
-var deleteid = 6
-var id = 6
-
 
 var personaje = new Personaje()
-personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
+personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad"}
 
 var Kitty = new Personaje()
 Kitty = {id: 10, imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:10,peso:15,historia:'es un gato',peliserie:'Hello Kitty' }
 
 ////////////////Personajes//////////////////
-async function deleteByIdPersonaje(deleteid){
+async function deleteByIdPersonaje(id){
     let svc = new PersonajeService()
     let data
-    data = await svc.deleteById(deleteid)
+    data = await svc.deleteById(id)
     console.log(data)
 }
 async function getAllPersonaje(){
@@ -47,6 +44,14 @@ async function getByIdPersonaje(id){
     data = await svc.getById(id)
     console.log(data)
 }
+
+
+deleteByIdPersonaje(6)
+//getAllPersonaje()
+//getByIdPersonaje(10)
+
+////////NO FUNCIONAN/////////
+/*
 async function AddPersonaje(PersonajeNuevo){
     let svc = new PersonajeService()
     let data
@@ -60,21 +65,16 @@ async function UpdatePersonaje(id){
     data = await svc.update(personaje)
     console.log(data)
 }
-
-//deleteByIdPersonaje(deleteid)
-//getAllPersonaje()
-//getByIdPersonaje(10)
-
-////////NO FUNCIONAN/////////
+*/
 //UpdatePersonaje(id)
 //AddPersonaje(Kitty)
 ////////NO FUNCIONAN/////////
 
 ////////////////PELICULAS//////////////////
-async function deleteByIdPelicula(deleteid){
+async function deleteByIdPelicula(id){
     let svc = new PeliculasService()
     let data
-    data = await svc.deleteById(deleteid)
+    data = await svc.deleteById(id)
     console.log(data)
 }
 async function getAllPelicula(){
@@ -89,6 +89,15 @@ async function getByIdPelicula(id){
     data = await svc.getById(id)
     console.log(data)
 }
+
+let HelloKitty = new Peliculas
+HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
+
+//getAllPelicula()
+//getByIdPelicula(10)
+
+////////NO FUNCIONAN/////////
+/*
 async function AddPelicula(PeliculaNueva){
     let svc = new PeliculasService()
     let data
