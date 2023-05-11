@@ -28,14 +28,9 @@ UpdatePersonaje(personaje)
 //getAll()
 //getById(10)
 //Update(id)
-
-let HelloKitty = new Peliculas
-HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
-AddPelicula(HelloKitty)
-
+deleteByIdPersonaje(10)
 var Kitty = new Personajes
 Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
-deleteByIdPersonaje(10)
 AddPersonaje(Kitty)
 getByIdPersonaje(10)
 console.log(getAllPersonaje())
@@ -115,8 +110,10 @@ async function UpdatePelicula(id){
     data = await svc.update(personaje)
     console.log(data);
 }
-
-//deleteByIdPelicula(deleteid)
+deleteByIdPelicula(10)
+let HelloKitty = new Peliculas
+HelloKitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', titulo: 'Hello Kitty', fechaCreacion: '20/02/2009', calificacion:'10', PersonajesAsociados: '10'}
+AddPelicula(HelloKitty)
 //getAllPelicula()
 //getByIdPelicula(10)
 
