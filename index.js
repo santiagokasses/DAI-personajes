@@ -4,12 +4,8 @@ import PeliculasService from "./src/services/Peliculas-services.js"
 import index from "./src/pages/index.js"; 
 import peliculas from "./src/pages/peliculas.js";
 import personajes from "./src/pages/personajes.js";
-<<<<<<< Updated upstream
 import Personajes from "./src/services/Personajes-services.js";
 import Peliculas from "./src/services/Peliculas-services";
-=======
-import Personajes from "./src/models/Personajes.js";
->>>>>>> Stashed changes
 var app = express()
 
 const getPeliculas = async() => JSON.stringify(await new PeliculasService().getAll())
@@ -85,19 +81,19 @@ async function UpdatePersonaje(id){
 
 ////////////////PELICULAS//////////////////
 async function deleteByIdPelicula(deleteid){
-    let svc = new PersonajeService();
+    let svc = new PeliculasService();
     let data;
     data = await svc.deleteById(deleteid)
     console.log(data);
 }
 async function getAllPelicula(){
-    let svc = new PersonajeService();
+    let svc = new PeliculasService();
     let data;
     data = await svc.getAll()
     console.log(data);
 }
 async function getByIdPelicula(id){
-    let svc = new PersonajeService();
+    let svc = new PeliculasService();
     let data;
     data = await svc.getById(id)
     console.log(data);
@@ -109,7 +105,7 @@ async function AddPelicula(PeliculaNueva){
     console.log(data);
 }
 async function UpdatePelicula(id){
-    let svc = new PersonajeService();
+    let svc = new PeliculasService();
     let data;
     let idPersonaje
     data = await svc.update(personaje)
