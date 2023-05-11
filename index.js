@@ -20,51 +20,45 @@ app.listen(3000, function() {
 
 var deleteid = 6
 var id = 6
-var personaje = new Personaje
+
+
+var personaje = new Personaje()
 personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
-console.log(personaje)
-UpdatePersonaje(personaje)
 
-
-deleteByIdPersonaje(10)
-var Kitty = new Personajes
+var Kitty = new Personaje()
 Kitty = {id: 10, imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:10,peso:15,historia:'es un gato',peliserie:'Hello Kitty' }
-AddPersonaje(Kitty)
-getByIdPersonaje(10)
-console.log(getAllPersonaje())
 
 ////////////////Personajes//////////////////
 async function deleteByIdPersonaje(deleteid){
-    let svc = new PersonajeService();
-    let data;
+    let svc = new PersonajeService()
+    let data
     data = await svc.deleteById(deleteid)
-    console.log(data);
+    console.log(data)
 }
 async function getAllPersonaje(){
-    let svc = new PersonajeService();
-    let data;
+    let svc = new PersonajeService()
+    let data
     data = await svc.getAll()
-    console.log(data);
+    console.log(data)
 }
 async function getByIdPersonaje(id){
-    let svc = new PersonajeService();
-    let data;
+    let svc = new PersonajeService()
+    let data
     data = await svc.getById(id)
-    console.log(data);
+    console.log(data)
 }
 async function AddPersonaje(PersonajeNuevo){
-    let svc = new PersonajeService();
-    let data;
+    let svc = new PersonajeService()
+    let data
     data = await svc.insert(PersonajeNuevo)
-    console.log(data);
+    console.log(data)
 }
 
 async function UpdatePersonaje(id){
-    let svc = new PersonajeService();
-    let data;
-    let idPersonaje
+    let svc = new PersonajeService()
+    let data
     data = await svc.update(personaje)
-    console.log(data);
+    console.log(data)
 }
 
 //deleteByIdPersonaje(deleteid)
@@ -78,35 +72,34 @@ async function UpdatePersonaje(id){
 
 ////////////////PELICULAS//////////////////
 async function deleteByIdPelicula(deleteid){
-    let svc = new PeliculasService();
-    let data;
+    let svc = new PeliculasService()
+    let data
     data = await svc.deleteById(deleteid)
-    console.log(data);
+    console.log(data)
 }
 async function getAllPelicula(){
-    let svc = new PeliculasService();
-    let data;
+    let svc = new PeliculasService()
+    let data
     data = await svc.getAll()
-    console.log(data);
+    console.log(data)
 }
 async function getByIdPelicula(id){
-    let svc = new PeliculasService();
-    let data;
+    let svc = new PeliculasService()
+    let data
     data = await svc.getById(id)
-    console.log(data);
+    console.log(data)
 }
 async function AddPelicula(PeliculaNueva){
-    let svc = new PeliculasService();
-    let data;
+    let svc = new PeliculasService()
+    let data
     data = await svc.insert(PeliculaNueva)
-    console.log(data);
+    console.log(data)
 }
 async function UpdatePelicula(id){
-    let svc = new PeliculasService();
-    let data;
-    let idPersonaje
+    let svc = new PeliculasService()
+    let data
     data = await svc.update(personaje)
-    console.log(data);
+    console.log(data)
 }
 deleteByIdPelicula(10)
 let HelloKitty = new Peliculas
