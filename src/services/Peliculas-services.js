@@ -39,7 +39,7 @@ class PeliculasService {
             let result = await pool.request()
             .input('pFechaCreacion', sql.Date, pelicula.FechaCreacion)
             .query(`INSERT INTO PeliSerie (Titulo, Imagen, Calificacion, FechaCreacion, PersonajesAsociados)
-            VALUES ('${pelicula.Titulo}', '${pelicula.Imagen}', ${pelicula.Calificacion}, @pFechaCreacion, '${pelicula.Asociados}')`);
+            VALUES ('${pelicula.Titulo}', '${pelicula.Imagen}', ${pelicula.Calificacion}, @pFechaCreacion, '${pelicula.PersonajesAsociados}')`);
             rowsAffected = result.rowsAffected;
         } catch (error) {
             console.log(error);
