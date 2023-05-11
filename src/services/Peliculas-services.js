@@ -38,7 +38,7 @@ class PeliculasService {
             let pool = await sql.connect(config);
             let result = await pool.request()
             .input('pFechaCreacion', sql.Date, pelicula.FechaCreacion)
-            .query(`INSERT INTO PeliSerie (Titulo, Imagen, Calificacion, FechaCreacion, Asociados)
+            .query(`INSERT INTO PeliSerie (Titulo, Imagen, Calificacion, FechaCreacion, PersonajesAsociados)
             VALUES ('${pelicula.Titulo}', '${pelicula.Imagen}', ${pelicula.Calificacion}, @pFechaCreacion, '${pelicula.Asociados}')`);
             rowsAffected = result.rowsAffected;
         } catch (error) {
@@ -60,7 +60,7 @@ class PeliculasService {
                 Imagen = '${pelicula.Imagen}',
                 Calificacion = ${pelicula.Calificacion},
                 FechaCreacion = @pFechaCreacion,
-                Asociados = '${pelicula.Asociados}'
+                PersonajesAsociados = '${pelicula.PersonajesAsociados}'
                 WHERE IDd = ${pelicula.id}`);
             rowsAffected = result.rowsAffected;
         } catch (error) {
