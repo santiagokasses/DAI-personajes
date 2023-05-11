@@ -23,6 +23,7 @@ var id = 6
 var personaje = new Personajes
 personaje = {Nombre : "Hanz landa", Imagen: "https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2020/06/20/hans-landa.jpeg", Edad: "46", Peso: "70", Historia: "Nazi", peliserie: "breaking bad", IDd: `${id}`}
 console.log(personaje)
+UpdatePersonaje(personaje)
 //deleteById(deleteid)
 //getAll()
 //getById(10)
@@ -34,7 +35,10 @@ AddPelicula(HelloKitty)
 
 var Kitty = new Personajes
 Kitty = {id: '10', imagen: 'https://static.wikia.nocookie.net/doblaje/images/b/b5/Kitianime.jpg/revision/latest/thumbnail/width/360/height/450?cb=20171001023505&path-prefix=es', nombre:'Kitty', edad:'10',peso:'15kg',historia:'es un gato',peliserie:'Hello Kitty' }
-
+deleteByIdPersonaje(10)
+AddPersonaje(Kitty)
+getByIdPersonaje(10)
+console.log(getAllPersonaje())
 
 ////////////////Personajes//////////////////
 async function deleteByIdPersonaje(deleteid){
