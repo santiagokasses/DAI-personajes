@@ -16,6 +16,38 @@ class PersonajesService {
         return returnArray;
     }
 
+    getPersonajesPORnombre = async (Nombre) => {
+        let returnEntity = null;
+        console.log('Estoy en: PersonajesService.getPersonajesPORnombre(Nombre)');
+        try {
+            let pool   = await sql.connect(config);
+            let result = await pool.request()
+            .input('pNombre', sql.VarChar(150), Nombre)
+            .query('SELECT * FROM Personaje WHERE Nombre = @pNombre');
+            returnEntity = result.recordsets[0][0];
+        } catch (error) {
+            console.log(error);
+        }
+        return returnEntity;
+    }
+
+    getPersonajesPORedad = async (Edad) => {
+        let returnEntity = null;
+        let returnArray = null;
+        console.log('Estoy en: PersonajesService.getPersonajesPORedad(Edad)');
+        try {
+            let pool   = await sql.connect(config);
+            let result = await pool.request()
+            .input('pEdad', sql.Int, Edad)
+            .query('SELECT * FROM Personaje WHERE Edad = @pEdad');
+            returnEntity = result.recordsets[0][0];
+            returnArray = result.recordsets[0];
+        } catch (error) {
+            console.log(error);
+        }
+        return returnArray;
+    }
+
     getById = async (id) => {
         let returnEntity = null;
         console.log('Estoy en: PersonajesService.getById(id)');
