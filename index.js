@@ -13,9 +13,9 @@ const getPersonajes = async() => JSON.stringify(await new PersonajeService().get
 app.get('/', async(req, res) => res.send(index(await getPeliculas(), await getPersonajes())))
 app.get('/GET/movies', async(req, res) => res.send(peliculas(await getPeliculas())))
 app.get('/characters', async(req, res) => res.send(personajes(await getPersonajes())))
-app.get('/characters/?t={Nombre}', async(req, res) => res.send(personajes(await getPersonajesPORnombre(Nombre))))
-app.get('/characters/?y={Edad}', async(req, res) => res.send(personajes(await getPersonajesPORedad(Edad))))
-app.get('/characters/?i={Id}', async(req, res) => res.send(personajes(await getByIdPersonaje(Id))))
+app.get('/characters/?t=' + Nombre, async(req, res) => res.send(personajes(await getPersonajesPORnombre(Nombre))))
+app.get('/characters/?y=' + Edad, async(req, res) => res.send(personajes(await getPersonajesPORedad(Edad))))
+app.get('/characters/?i=' + Id, async(req, res) => res.send(personajes(await getByIdPersonaje(Id))))
 
 app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
